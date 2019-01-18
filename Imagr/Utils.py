@@ -32,6 +32,8 @@ import json
 import macdisk
 import objc
 
+from distutils import version
+
 from gurl import Gurl
 
 
@@ -723,7 +725,39 @@ def downloadChunks(url, file, progress_method=None, additional_headers=None, res
                                                             url)
         return False, error
 
+# 10.14 installer will clean up files in known system directories so they need to be installed as a pkg
+# this just creates the config and copies the first-boot script - LaunchAgents and LoginLog added as pkg
+def createFirstBootConfigAndScript(root, network=True, reboot=True):
+    NSLog("Writing first boot config...")
+    config_plist = {}
+    retry_count = 10
+    config_plist['Network'] = network
+    config_plist['RetryCount'] = retry_count
+    config_plist['Reboot'] = reboot
+    firstboot_dir = '.imagr/first-boot'
+    if not os.path.exists(os.path.join(root, firstboot_dir)):
+        os.makedirs(os.path.join(root, firstboot_dir))
+    plistlib.writePlist(config_plist, os.path.join(root, firstboot_dir,
+                                                   'config.plist'))
 
+    NSLog("Copying first-boot script...")
+    if not os.path.exists(os.path.join(root, firstboot_dir, 'first-boot')):
+        # copy the script
+        script_dir = os.path.dirname(os.path.realpath(__file__))
+        shutil.copy(os.path.join(script_dir, 'first-boot'), os.path.join(root, firstboot_dir, 'first-boot'))
+        # Set the permisisons
+        os.chmod(os.path.join(root, firstboot_dir, 'first-boot'), 0755)
+        os.chown(os.path.join(root, firstboot_dir, 'first-boot'), 0, 0)
+
+
+    # need to make it build pkg at app build time.
+def generatedBootToolsPkgPath():
+    NSLog("Creating first boot tools pkg path")
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    pkg_local_url = 'file://' + os.path.join(script_dir, '999_first_boot_tools.pkg')
+    return pkg_local_url
+
+# pre 10.14 first-boot copy
 def copyFirstBoot(root, network=True, reboot=True):
     NSLog("Copying first boot pkg install tools")
     # Create the config plist

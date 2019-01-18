@@ -7,6 +7,7 @@ import subprocess
 import shutil
 
 firstboot_dir = '/.imagr/first-boot'
+osinstall_pkgcache = '/.imagr-private'
 config_plist = os.path.join(firstboot_dir, 'config.plist')
 items_dir = os.path.join(firstboot_dir, 'items')
 items_done = None
@@ -64,6 +65,9 @@ def cleanup():
     # remove firstboot_dir
     if os.path.exists(firstboot_dir):
         shutil.rmtree(firstboot_dir)
+    # remove osintall pkgcache
+    if os.path.exists(osinstall_pkgcache):
+        shutil.rmtree(osinstall_pkgcache)
 
 
 def main():

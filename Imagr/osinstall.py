@@ -136,7 +136,7 @@ def download_and_cache_pkgs(
     on the target volume. Return a list of the stashed paths.
     Raise PkgCaching error if there is a problem'''
     pkgpaths = []
-    private_dir = os.path.join(target, 'private')
+    private_dir = os.path.join(target, '.imagr-private')
     private_tmp_dir = os.path.join(private_dir, 'tmp')
     if not os.path.exists(private_tmp_dir):
         os.makedirs(private_tmp_dir)
@@ -144,7 +144,7 @@ def download_and_cache_pkgs(
         os.chmod(private_dir, 0755)
         os.chown(private_tmp_dir, 0, 0)
         os.chmod(private_tmp_dir, 01777)
-    dest_dir = os.path.join(target, 'private/tmp/pkgcache')
+    dest_dir = os.path.join(target, '.imagr-private/tmp/pkgcache')
     if not os.path.exists(dest_dir):
         os.makedirs(dest_dir)
     for url in pkgurls:
@@ -181,6 +181,16 @@ def run(item, target, progress_method=None):
     installed_os_version = get_os_version(app_path)
 
     additional_package_paths = []
+    # need to check if the macOS installer is 10.14 or later then
+    # need to automatically append the LaunchAgents, LoginLog, and Helpers pkg
+    # as last additional package installed by the installer
+    if (version.LooseVersion(installed_os_version) >= version.LooseVersion('10.14')):
+        if ('additional_package_urls' not in item):
+            # if no additional pkgs in plist create list and add first-boot pkg
+            item['additional_package_urls'] = ()
+            item['additional_package_urls'].append(Utils.generatedBootToolsPkgPath())
+        else:
+            item['additional_package_urls'].append(Utils.generatedBootToolsPkgPath())
     if (version.LooseVersion(
             installed_os_version) >= version.LooseVersion('10.13') and
             'additional_package_urls' in item):
@@ -219,11 +229,20 @@ def run(item, target, progress_method=None):
         # be poor to non-existent.
         cmd = []
 
-    cmd.extend([startosinstall_path,
-                '--agreetolicense',
-                '--applicationpath', app_path,
-                '--volume', target,
-                '--nointeraction'])
+
+    if (version.LooseVersion(installed_os_version) >= version.LooseVersion('10.14')):
+        # applicationpath depricated in 10.14
+        # forces generated boot tools pkg to install
+        cmd.extend([startosinstall_path,
+                    '--agreetolicense',
+                    '--volume', target,
+                    '--nointeraction'])
+    else:
+        cmd.extend([startosinstall_path,
+                    '--agreetolicense',
+                    '--applicationpath', app_path,
+                    '--volume', target,
+                    '--nointeraction'])
 
     # add additional startosinstall options if any
     if 'additional_startosinstall_options' in item:

@@ -28,6 +28,7 @@ import Quartz
 import time
 import powermgr
 import osinstall
+from distutils import version
 
 class MainController(NSObject):
 
@@ -784,13 +785,24 @@ class MainController(NSObject):
             os.makedirs(first_boot_items_dir, 0755)
 
     def setupFirstBootTools(self):
+        NSLog("Setting up boot tools")
         # copy bits for first boot script
         packages_dir = os.path.join(
             self.targetVolume.mountpoint, '.imagr/first-boot/')
         if not os.path.exists(packages_dir):
             self.setupFirstBootDir()
-        Utils.copyFirstBoot(self.targetVolume.mountpoint,
-                            self.waitForNetwork, self.firstBootReboot)
+        # test to see if this works
+        # will need to check for startosinstall mount and check os version
+        installed_os_version = '10.14'
+        if (version.LooseVersion(installed_os_version) >= version.LooseVersion('10.14')):
+            NSLog("Detected 10.14 or later install - creating first boot config and copying script")
+            NSLog("LoginLog and LaunchAgents added to macOS installer as pkg")
+            Utils.createFirstBootConfigAndScript(self.targetVolume.mountpoint)
+        else:
+            NSLog("Detected 10.13 or earlier install - using copy for boot tools")
+            Utils.copyFirstBoot(self.targetVolume.mountpoint,
+                                self.waitForNetwork, self.firstBootReboot)
+
 
     def processWorkflowOnThread_(self, sender):
         '''Process the selected workflow'''
