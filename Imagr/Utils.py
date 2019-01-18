@@ -750,7 +750,8 @@ def createFirstBootConfigAndScript(root, network=True, reboot=True):
         os.chown(os.path.join(root, firstboot_dir, 'first-boot'), 0, 0)
 
 
-    # need to make it build pkg at app build time.
+# build path to the generated first boot tools pkg
+# pkg built during app build phase and copied into bundle
 def generatedBootToolsPkgPath():
     NSLog("Creating first boot tools pkg path")
     script_dir = os.path.dirname(os.path.realpath(__file__))
