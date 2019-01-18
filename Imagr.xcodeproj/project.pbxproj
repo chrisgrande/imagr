@@ -9,17 +9,18 @@
 /* Begin PBXBuildFile section */
 		050D9F831CE5FF1000250591 /* LLBorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 050D9F821CE5FF1000250591 /* LLBorderlessWindow.m */; };
 		100FA3EC1D51DC6C000F1C1C /* powermgr.py in Resources */ = {isa = PBXBuildFile; fileRef = 100FA3EB1D51DC6C000F1C1C /* powermgr.py */; };
-		10DA31C31D92963A00969112 /* se.gu.it.LoginLog.login.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10DA31C21D92963A00969112 /* se.gu.it.LoginLog.login.plist */; };
+		41DE803021F23B220074A5CB /* LoginLog.app in Resources */ = {isa = PBXBuildFile; fileRef = 41DE802721F23B220074A5CB /* LoginLog.app */; };
+		41DE803121F23B220074A5CB /* se.gu.it.LoginLog.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41DE802921F23B220074A5CB /* se.gu.it.LoginLog.plist */; };
+		41DE803221F23B220074A5CB /* se.gu.it.LoginLog.login.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41DE802A21F23B220074A5CB /* se.gu.it.LoginLog.login.plist */; };
+		41DE803321F23B220074A5CB /* com.grahamgilbert.imagr-first-boot-pkg.plist in Resources */ = {isa = PBXBuildFile; fileRef = 41DE802C21F23B220074A5CB /* com.grahamgilbert.imagr-first-boot-pkg.plist */; };
+		41DE803721F23B440074A5CB /* 999_first_boot_tools.pkg in Resources */ = {isa = PBXBuildFile; fileRef = 41DE803621F23B3B0074A5CB /* 999_first_boot_tools.pkg */; };
 		C06979C21AE83F3500914535 /* gurl.py in Resources */ = {isa = PBXBuildFile; fileRef = C06979C11AE83F3500914535 /* gurl.py */; };
 		C0D0AB191F8C36FC001B1CF3 /* osinstall.py in Resources */ = {isa = PBXBuildFile; fileRef = C0D0AB181F8C36FC001B1CF3 /* osinstall.py */; };
 		C0D0AB1D1F8C3D03001B1CF3 /* ptyexec in Resources */ = {isa = PBXBuildFile; fileRef = C0D0AB1C1F8C3D03001B1CF3 /* ptyexec */; };
 		C0D521AB2111184F00DB296F /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0D521AA2111184F00DB296F /* Python.framework */; };
 		C0D521AD2111198100DB296F /* Python.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C0D521AA2111184F00DB296F /* Python.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		FC21F1741C6235DA0039D923 /* localize.sh in Resources */ = {isa = PBXBuildFile; fileRef = FC21F1731C6235DA0039D923 /* localize.sh */; };
-		FC98DA231AD6B2DC00F90405 /* com.grahamgilbert.imagr-first-boot-pkg.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC98DA1F1AD6B2DC00F90405 /* com.grahamgilbert.imagr-first-boot-pkg.plist */; };
 		FC98DA241AD6B2DC00F90405 /* first-boot in Resources */ = {isa = PBXBuildFile; fileRef = FC98DA201AD6B2DC00F90405 /* first-boot */; };
-		FC98DA251AD6B2DC00F90405 /* LoginLog.app in Resources */ = {isa = PBXBuildFile; fileRef = FC98DA211AD6B2DC00F90405 /* LoginLog.app */; };
-		FC98DA261AD6B2DC00F90405 /* se.gu.it.LoginLog.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC98DA221AD6B2DC00F90405 /* se.gu.it.LoginLog.plist */; };
 		FCEA80AF1AD0101100DBA039 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEA80AE1AD0101100DBA039 /* Cocoa.framework */; };
 		FCEA80B81AD0101100DBA039 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEA80B71AD0101100DBA039 /* main.m */; };
 		FCEA80BB1AD0101100DBA039 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FCEA80B91AD0101100DBA039 /* Credits.rtf */; };
@@ -81,16 +82,20 @@
 		050D9F811CE5FF1000250591 /* LLBorderlessWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBorderlessWindow.h; sourceTree = "<group>"; };
 		050D9F821CE5FF1000250591 /* LLBorderlessWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBorderlessWindow.m; sourceTree = "<group>"; };
 		100FA3EB1D51DC6C000F1C1C /* powermgr.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = powermgr.py; sourceTree = "<group>"; };
-		10DA31C21D92963A00969112 /* se.gu.it.LoginLog.login.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = se.gu.it.LoginLog.login.plist; sourceTree = "<group>"; };
+		41DE802721F23B220074A5CB /* LoginLog.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = LoginLog.app; sourceTree = "<group>"; };
+		41DE802921F23B220074A5CB /* se.gu.it.LoginLog.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = se.gu.it.LoginLog.plist; sourceTree = "<group>"; };
+		41DE802A21F23B220074A5CB /* se.gu.it.LoginLog.login.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = se.gu.it.LoginLog.login.plist; sourceTree = "<group>"; };
+		41DE802C21F23B220074A5CB /* com.grahamgilbert.imagr-first-boot-pkg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.grahamgilbert.imagr-first-boot-pkg.plist"; sourceTree = "<group>"; };
+		41DE802E21F23B220074A5CB /* postinstall */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = postinstall; sourceTree = "<group>"; };
+		41DE802F21F23B220074A5CB /* build_first_boot_tools_pkg.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = build_first_boot_tools_pkg.sh; sourceTree = "<group>"; };
+		41DE803621F23B3B0074A5CB /* 999_first_boot_tools.pkg */ = {isa = PBXFileReference; lastKnownFileType = file; path = 999_first_boot_tools.pkg; sourceTree = "<group>"; };
+		41DE803A21F23F510074A5CB /* cleanup_first_boot_tools_pkg.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = cleanup_first_boot_tools_pkg.sh; sourceTree = "<group>"; };
 		C06979C11AE83F3500914535 /* gurl.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = gurl.py; sourceTree = "<group>"; };
 		C0D0AB181F8C36FC001B1CF3 /* osinstall.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = osinstall.py; sourceTree = "<group>"; };
 		C0D0AB1C1F8C3D03001B1CF3 /* ptyexec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = ptyexec; sourceTree = "<group>"; };
 		C0D521AA2111184F00DB296F /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Python.framework; sourceTree = "<group>"; };
 		FC21F1731C6235DA0039D923 /* localize.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = localize.sh; sourceTree = "<group>"; };
-		FC98DA1F1AD6B2DC00F90405 /* com.grahamgilbert.imagr-first-boot-pkg.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "com.grahamgilbert.imagr-first-boot-pkg.plist"; sourceTree = "<group>"; };
 		FC98DA201AD6B2DC00F90405 /* first-boot */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = "first-boot"; sourceTree = "<group>"; };
-		FC98DA211AD6B2DC00F90405 /* LoginLog.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; path = LoginLog.app; sourceTree = "<group>"; };
-		FC98DA221AD6B2DC00F90405 /* se.gu.it.LoginLog.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = se.gu.it.LoginLog.plist; sourceTree = "<group>"; };
 		FCEA80AB1AD0101100DBA039 /* Imagr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Imagr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEA80AE1AD0101100DBA039 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FCEA80B11AD0101100DBA039 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -153,18 +158,78 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41DE802321F23B220074A5CB /* first_boot_tools_pkg */ = {
+			isa = PBXGroup;
+			children = (
+				41DE803621F23B3B0074A5CB /* 999_first_boot_tools.pkg */,
+				41DE802421F23B220074A5CB /* payload */,
+				41DE802D21F23B220074A5CB /* scripts */,
+				41DE802F21F23B220074A5CB /* build_first_boot_tools_pkg.sh */,
+				41DE803A21F23F510074A5CB /* cleanup_first_boot_tools_pkg.sh */,
+			);
+			path = first_boot_tools_pkg;
+			sourceTree = "<group>";
+		};
+		41DE802421F23B220074A5CB /* payload */ = {
+			isa = PBXGroup;
+			children = (
+				41DE802521F23B220074A5CB /* Library */,
+			);
+			path = payload;
+			sourceTree = "<group>";
+		};
+		41DE802521F23B220074A5CB /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				41DE802621F23B220074A5CB /* PrivilegedHelperTools */,
+				41DE802821F23B220074A5CB /* LaunchAgents */,
+				41DE802B21F23B220074A5CB /* LaunchDaemons */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		41DE802621F23B220074A5CB /* PrivilegedHelperTools */ = {
+			isa = PBXGroup;
+			children = (
+				41DE802721F23B220074A5CB /* LoginLog.app */,
+			);
+			path = PrivilegedHelperTools;
+			sourceTree = "<group>";
+		};
+		41DE802821F23B220074A5CB /* LaunchAgents */ = {
+			isa = PBXGroup;
+			children = (
+				41DE802921F23B220074A5CB /* se.gu.it.LoginLog.plist */,
+				41DE802A21F23B220074A5CB /* se.gu.it.LoginLog.login.plist */,
+			);
+			path = LaunchAgents;
+			sourceTree = "<group>";
+		};
+		41DE802B21F23B220074A5CB /* LaunchDaemons */ = {
+			isa = PBXGroup;
+			children = (
+				41DE802C21F23B220074A5CB /* com.grahamgilbert.imagr-first-boot-pkg.plist */,
+			);
+			path = LaunchDaemons;
+			sourceTree = "<group>";
+		};
+		41DE802D21F23B220074A5CB /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+				41DE802E21F23B220074A5CB /* postinstall */,
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		FC98DA1E1AD6B2DC00F90405 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				41DE802321F23B220074A5CB /* first_boot_tools_pkg */,
 				C0D521AA2111184F00DB296F /* Python.framework */,
 				C0D0AB1C1F8C3D03001B1CF3 /* ptyexec */,
 				FC21F1731C6235DA0039D923 /* localize.sh */,
 				FCED84641B0201B20072AC1C /* set_computer_name.sh */,
-				FC98DA1F1AD6B2DC00F90405 /* com.grahamgilbert.imagr-first-boot-pkg.plist */,
-				10DA31C21D92963A00969112 /* se.gu.it.LoginLog.login.plist */,
 				FC98DA201AD6B2DC00F90405 /* first-boot */,
-				FC98DA211AD6B2DC00F90405 /* LoginLog.app */,
-				FC98DA221AD6B2DC00F90405 /* se.gu.it.LoginLog.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -284,9 +349,11 @@
 			buildPhases = (
 				FCEA80A71AD0101100DBA039 /* Sources */,
 				FCEA80A81AD0101100DBA039 /* Frameworks */,
+				4192813B21F23792009108BD /* Build First Boot Tools PKG */,
 				FCEA80A91AD0101100DBA039 /* Resources */,
-				E665E9221AE887C5001C07F4 /* ShellScript */,
+				E665E9221AE887C5001C07F4 /* Set Version from GIT Revision */,
 				C0D521AC2111196A00DB296F /* CopyFiles */,
+				41DE803921F23EFC0074A5CB /* Cleanup Generated First Boot Tools PKG */,
 			);
 			buildRules = (
 			);
@@ -334,10 +401,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41DE803721F23B440074A5CB /* 999_first_boot_tools.pkg in Resources */,
 				FCED84651B0201B20072AC1C /* set_computer_name.sh in Resources */,
 				C06979C21AE83F3500914535 /* gurl.py in Resources */,
 				FCEA81061AD018E500DBA039 /* timer.py in Resources */,
-				FC98DA251AD6B2DC00F90405 /* LoginLog.app in Resources */,
+				41DE803221F23B220074A5CB /* se.gu.it.LoginLog.login.plist in Resources */,
 				FCEA80F51AD018E500DBA039 /* certs_test.py in Resources */,
 				FCEA80FA1AD018E500DBA039 /* experiments.py in Resources */,
 				FCEA80CE1AD0108B00DBA039 /* NetBootVolume.icns in Resources */,
@@ -349,13 +417,13 @@
 				FCEA81011AD018E500DBA039 /* macdisk_test.py in Resources */,
 				FCEA81091AD018E500DBA039 /* wifi_network_order_test.py in Resources */,
 				FCEA80C71AD0101100DBA039 /* Images.xcassets in Resources */,
-				FC98DA231AD6B2DC00F90405 /* com.grahamgilbert.imagr-first-boot-pkg.plist in Resources */,
 				FCEA80F31AD018E500DBA039 /* applescript_test.py in Resources */,
 				FCEA80FB1AD018E500DBA039 /* experiments_test.py in Resources */,
+				41DE803321F23B220074A5CB /* com.grahamgilbert.imagr-first-boot-pkg.plist in Resources */,
 				FCEA81051AD018E500DBA039 /* systemconfig_test.py in Resources */,
 				FCEA80D01AD010D100DBA039 /* MainController.py in Resources */,
 				FCEA80EF1AD018E500DBA039 /* __init__.py in Resources */,
-				FC98DA261AD6B2DC00F90405 /* se.gu.it.LoginLog.plist in Resources */,
+				41DE803021F23B220074A5CB /* LoginLog.app in Resources */,
 				FCEA80D21AD0110A00DBA039 /* FoundationPlist.py in Resources */,
 				FCEA81081AD018E500DBA039 /* wifi_network_order.py in Resources */,
 				FCEA80C21AD0101100DBA039 /* AppDelegate.py in Resources */,
@@ -371,11 +439,11 @@
 				FCEA80FD1AD018E500DBA039 /* getauth_test.py in Resources */,
 				FCEA80F21AD018E500DBA039 /* applescript.py in Resources */,
 				FCEA80F11AD018E500DBA039 /* airport_test.py in Resources */,
-				10DA31C31D92963A00969112 /* se.gu.it.LoginLog.login.plist in Resources */,
 				FCEA80F01AD018E500DBA039 /* airport.py in Resources */,
 				FCEA80F81AD018E500DBA039 /* ds.py in Resources */,
 				FCEA80FE1AD018E500DBA039 /* gmacpyutil.py in Resources */,
 				FC21F1741C6235DA0039D923 /* localize.sh in Resources */,
+				41DE803121F23B220074A5CB /* se.gu.it.LoginLog.plist in Resources */,
 				FCEA80C51AD0101100DBA039 /* MainMenu.xib in Resources */,
 				FCEA810B1AD02C9A00DBA039 /* Utils.py in Resources */,
 				FCEA80F71AD018E500DBA039 /* defaults.py in Resources */,
@@ -390,13 +458,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		E665E9221AE887C5001C07F4 /* ShellScript */ = {
+		4192813B21F23792009108BD /* Build First Boot Tools PKG */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Build First Boot Tools PKG";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				$SRCROOT/Imagr/Resources/first_boot_tools_pkg/999_first_boot_tools.pkg,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# constructs first boots tools pkg for macOS >= 10.14\n$SRCROOT/Imagr/Resources/first_boot_tools_pkg/build_first_boot_tools_pkg.sh\n";
+		};
+		41DE803921F23EFC0074A5CB /* Cleanup Generated First Boot Tools PKG */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				$SRCROOT/Imagr/Resources/first_boot_tools_pkg/999_first_boot_tools.pkg,
+			);
+			name = "Cleanup Generated First Boot Tools PKG";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n$SRCROOT/Imagr/Resources/first_boot_tools_pkg/cleanup_first_boot_tools_pkg.sh\n";
+		};
+		E665E9221AE887C5001C07F4 /* Set Version from GIT Revision */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Set Version from GIT Revision";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
